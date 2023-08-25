@@ -1,0 +1,280 @@
+/* Reset default margin and padding, and center content vertically and horizontally */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightgrey;
+}
+
+.required {
+    color: red;
+}
+
+/* Styles for the login/signup button */
+#auth-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button hover effect */
+#auth-button:hover {
+    background-color: #2980b9;
+}
+
+/* Styles for password toggle icon */
+#open-eye-login,
+#open-eye-signup {
+    display: none;
+}
+
+#closed-eye-login,
+#closed-eye-signup {
+    color: green;
+}
+
+/* Styles for password input field and toggle icon */
+#password-div {
+    position: relative;
+}
+
+#password-div>ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+}
+
+/* Styles for the main popup container */
+.mainCard {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Styles for the popup content */
+.popup-content {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid ghostwhite;
+    width: 300px;
+}
+
+/* Styles for the tab buttons */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid green;
+    background-color: #f0f0f0;
+    border: none;
+    outline: none;
+}
+
+.tab-button.active {
+    border-bottom: 2px solid green;
+    background-color: #ccc;
+}
+
+/* Styles for the tab content */
+.tab-content {
+    display: none;
+}
+
+/* Error message styling */
+#signupErrorMessage {
+    color: red;
+}
+
+/* Styling for form input fields and labels */
+.input-holders {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.input-holders>label {
+    margin-bottom: 5px;
+}
+
+
+.input-holders section,
+#mobile-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    background-color: transparent;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-holders section>input {
+    width: 90%;
+    height: 90%;
+    outline: none;
+    border: none;
+    background-color: transparent !important;
+}
+
+/* disable autofill background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 40px white inset !important;
+}
+
+#mobile-holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+}
+
+#mobile-holder input {
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+.input-holders section:hover {
+    border-color: lightskyblue;
+}
+
+#options {
+    width: 100%;
+    height: 50px;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+
+}
+
+#navtosign {
+    width: 100%;
+    display: flex;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+#navtosign>span {
+    color: green;
+}
+
+#navtosign>span:hover {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Styling for form buttons */
+.button-access {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#login-button {
+    margin: auto;
+
+}
+
+.button-access button {
+    width: 40%;
+    height: 35px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid lightskyblue;
+    border-radius: 7px;
+}
+
+.button-access button:hover {
+    background-color: lightskyblue;
+}
+/*For tablets and mobile screens */
+@media screen and (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-button {
+        width: 100%;
+        border-bottom: none;
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .popup-content {
+        width: 80%;
+        max-width: 300px;
+        height: 510px;
+    }
+
+    .popup-content {
+        padding: 15px;
+    }
+
+
+    .button-access {
+        flex-direction: column;
+    }
+
+    .button-access button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+
+    .input-holders section {
+        height: 50px;
+        width: 100%;
+    }
+
+    .input-holders label,
+    .input-holders input {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Login/Signup page</title>
+</head>
+
+<body>
+    <!-- Button to toggel the login/signup popup -->
+    <button id="auth-button">Login/Sign-up</button>
+
+    <!-- Main popup container -->
+    <div class="mainCard" id="popupContainer">
+        <div class="popup-content">
+            <!-- Tabs for switching between login and signup -->
+            <div class="tabs">
+                <button class="tab-button active" data-tab="login">Login</button>
+                <button class="tab-button" data-tab="signup">Sign Up</button>
+            </div>
+
+        
+            <div class="tab-content" id="loginTab">
+                <!-- Login form starts from here -->
+                <form id="loginForm" novalidate>
+                    <!-- Input field for email -->
+                    <div class="input-holders">
+                        <label for="fullName">Email<span class="required">*</span></label>
+                        <section><input type="text" id="fullName" name="usermail" placeholder="Enter your username" required></section>
+                        
+                    </div>
+
+                   
+                    <div class="input-holders" id="password-div">
+                        <label for="signupPassword">Password<span class="required">*</span></label>
+                        <section>
+                            <input type="password" id="loginPassword" name="userPassword" placeholder="Enter your Password"
+                            required>
+                        </section>
+                        
+                             <!--  password  visibility toggling -->
+                        <ion-icon id="open-eye-login" name="eye-outline"></ion-icon>
+                        <ion-icon id="closed-eye-login" name="eye-off-outline"></ion-icon>
+                    </div>
+                    <div id="options">
+                        <div id="bind"><input type="checkbox" id="remember-me" name="remember-me"><label for="remember-me">RememberMe</label></div>
+                        
+                        
+                        <a href="">Forgot Password?</a></div>
+                    <!-- Button for login -->
+                    <div class="button-access"><button type="submit" id="login-button">Login</button></div>
+                       <div id="navtosign"><label for="sign">Dont have an account?</label><span id="navgate-to-signup">Sign-Up</span></div>
+                    <!-- Error message for login -->
+                    <p class="error-message" id="loginErrorMessage"></p>
+                </form>
+            </div>
+
+            
+            <div class="tab-content" id="signupTab">
+                <!-- Signup form starts and disabled default validation-->
+
+                <form id="signupForm" novalidate>
+                
+                    <div class="input-holders">
+                        <label for="fullName">Full Name<span class="required">*</span></label>
+                        <section><input type="text" id="fullName" name="fullName" placeholder="Enter your username" required></section>
+                        
+                    </div>
+
+                    
+                    <div class="input-holders">
+                        <label for="signupEmail">Email<span class="required">*</span></label>
+                        <section>  <input type="email" id="signupEmail" name="signupEmail" placeholder="Enter your Email" required></section>
+                      
+                    </div>
+
+                  
+                    <div class="input-holders" id="password-div">
+                        <label for="signupPassword">Password<span class="required">*</span></label>
+                        <section>   <input type="password" id="signupPassword" name="signupPassword"
+                            placeholder="Enter your Password" required></section>
+                     
+                              <!--Password visibility toggling -->
+                        <ion-icon id="open-eye-signup" name="eye-outline"></ion-icon>
+                        <ion-icon id="closed-eye-signup" name="eye-off-outline"></ion-icon>
+                    </div>
+
+                    
+                    <div class="input-holders">
+                        <label for="mobile">Mobile<span class="required">*</span></label>
+                        <div id="mobile-holder">
+                            <div>+91 |</div>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Contact number" pattern="[0-9]{10}" required>
+                      
+                        </div>
+                        
+                       
+                    </div>
+
+                    <!-- Error message for signup -->
+                    <p id="signupErrorMessage"></p>
+
+                    <!-- Buttons for going back and signing up -->
+                    <div class="button-access">
+                        <button id="back-button"><ion-icon name="arrow-back-outline"></ion-icon>Back</button>
+                        <button type="submit">Sign-Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Includes all  JavaScript files -->
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
